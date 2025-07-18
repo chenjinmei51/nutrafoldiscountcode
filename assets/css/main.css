@@ -2271,16 +2271,32 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
 @media screen and (max-width: 736px) {
   .table-wrapper {
     overflow-x: auto;
     display: block;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
   }
 
   .table-wrapper table {
-    min-width: 600px; /* 根据你的表格内容适当调整 */
+    min-width: 600px;
+  }
+
+  .table-wrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .table-wrapper::-webkit-scrollbar-track {
+    background: #f0f0f0;
+  }
+
+  .table-wrapper::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
   }
 }
+
 
 
