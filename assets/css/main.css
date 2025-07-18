@@ -2279,7 +2279,8 @@ button,
   }
 
   .table-wrapper table {
-    min-width: 600px;
+    min-width: 600px; /* 根据你的表格内容适当调整 */
   }
 }
+
 
