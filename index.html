@@ -1440,23 +1440,6 @@ Nutrafol applies automatic discounts when you choose a subscription plan — <st
   }
 </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('message', function (event) {
-      if (event.origin !== 'https://cusdis.com') return;
-      const data = event.data;
-      if (typeof data === 'object' && data.event === 'resize') {
-        const iframe = document.querySelector('iframe[data-cusdis-host]');
-        if (iframe) {
-          iframe.style.height = data.data + 'px';
-          iframe.style.overflow = 'hidden';
-        }
-      }
-    });
-  });
-</script>
-
-
 
 
 
