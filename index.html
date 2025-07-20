@@ -40,24 +40,31 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/lightbox.css" />
 
+
 <style>
+  /* 控制留言提示和评论容器对齐 */
+  .comment-block {
+    max-width: 720px;
+    margin: 3rem auto 0;
+    padding: 0 1rem;
+  }
+
   #cusdis_thread {
     width: 100%;
-    padding: 0;
-    margin-bottom: 3rem;
     box-sizing: border-box;
-    overflow: visible !important;
+    overflow: hidden;
   }
 
   iframe[data-cusdis-host] {
+    width: 100% !important;
     max-width: 100%;
-    width: 100%;
-    overflow: hidden !important;
     border: none !important;
-    height: auto !important;
     display: block;
+    overflow: hidden !important;
   }
 </style>
+
+
 
 
 	</head>
@@ -1306,19 +1313,21 @@ Nutrafol applies automatic discounts when you choose a subscription plan — <st
 <!-- 分割线 -->
 <hr style="border: none; height: 1px; background-color: #ddd; margin: 3rem 0;" />
 
-<!-- 留言提示 -->
-<p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 1rem;">
-  Leave a comment below 👇
-</p>
+<!-- ✅ 留言提示 + 评论区 -->
+<div class="comment-block">
+  <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 1rem;">
+    Leave a comment below 👇
+  </p>
 
-<!-- 评论组件 -->
-<div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="b061dc20-9c1d-4eb0-95fc-eadafacf2c1a"
-  data-page-id="/"
-  data-page-url="https://nutrafoldiscountcode.com/"
-  data-page-title="Home Page">
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="b061dc20-9c1d-4eb0-95fc-eadafacf2c1a"
+    data-page-id="/"
+    data-page-url="https://nutrafoldiscountcode.com/"
+    data-page-title="Home Page">
+  </div>
 </div>
+
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
 
