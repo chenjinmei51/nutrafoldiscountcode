@@ -1312,6 +1312,21 @@ Nutrafol applies automatic discounts when you choose a subscription plan — <st
 </div>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
+<!-- 👇 添加这段脚本确保 iframe 自动调整高度 -->
+<script>
+  window.addEventListener('message', function (event) {
+    if (event.origin !== 'https://cusdis.com') return;
+    const data = event.data;
+    if (typeof data === 'object' && data.event === 'resize') {
+      const iframe = document.querySelector('iframe[data-cusdis-host]');
+      if (iframe) {
+        iframe.style.height = data.data + 'px';
+        iframe.style.overflow = 'hidden';
+      }
+    }
+  });
+</script>
+
 	  
 
 
