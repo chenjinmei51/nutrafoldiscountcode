@@ -1338,6 +1338,27 @@ Nutrafol applies automatic discounts when you choose a subscription plan — <st
   </a>
 </section>
 
+									<section style="margin-top: 40px; padding: 20px; background-color: #f4f8fc; border-radius: 8px;">
+  <h2 style="font-size: 1.5em; margin-bottom: 10px;">Why Nutrafol + Discount Code = The Smart Choice</h2>
+
+  <p style="font-size: 1em; line-height: 1.6;">
+    <strong>Nutrafol</strong> isn’t just a popular hair supplement — it’s a science-backed solution trusted by thousands.
+    Whether you're starting your hair wellness journey or maintaining strong, healthy growth, Nutrafol delivers real results.
+  </p>
+
+  <p style="font-size: 1em; line-height: 1.6; margin-top: 10px;">
+    By combining the <strong>auto-applied site discount</strong> with an extra <strong>Nutrafol discount code</strong>, you’ll get the <em>maximum savings</em> available — all while investing in your hair health.
+  </p>
+
+  <a href="https://sovrn.co/1406d2p"
+     target="_blank"
+     rel="noopener noreferrer"
+     onclick="copyThenRedirect(event, 'READY2HELP', this.href)"
+     style="display: inline-block; margin-top: 15px; padding: 12px 20px; background-color: #1a73e8; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+    Click here to get started →
+  </a>
+</section>
+
 <div style="margin-top: 40px; padding: 15px; background-color: #fefbea; border-left: 4px solid #facc15; border-radius: 6px; font-size: 0.95em; color: #444;">
   <strong>Disclosure:</strong> Some links on this site are affiliate links. This means we may earn a commission if you make a purchase through them — at no extra cost to you. We only promote products we truly believe in, like Nutrafol.
 </div>
@@ -1428,46 +1449,17 @@ Nutrafol applies automatic discounts when you choose a subscription plan — <st
 </div>
 
 <script>
-function copyAndRedirect(code, url) {
-  navigator.clipboard.writeText(code).then(() => {
-    showToast(`Code copied: ${code} – Redirecting...`);
+  function copyThenRedirect(event, code, url) {
+    event.preventDefault(); // 阻止默认点击跳转
 
-    setTimeout(() => {
-      window.open(url, '_blank');
-    }, 2000); // Delay before redirect
-  }).catch(() => {
-    showToast('Failed to copy the code.');
-  });
-}
-
-function showToast(message) {
-  const toast = document.createElement('div');
-  toast.innerText = message;
-  toast.style.position = 'fixed';
-  toast.style.bottom = '30px';
-  toast.style.left = '50%';
-  toast.style.transform = 'translateX(-50%)';
-  toast.style.background = '#333';
-  toast.style.color = '#fff';
-  toast.style.padding = '12px 20px';
-  toast.style.borderRadius = '6px';
-  toast.style.fontSize = '14px';
-  toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-  toast.style.zIndex = '9999';
-  toast.style.opacity = '0';
-  toast.style.transition = 'opacity 0.3s ease';
-
-  document.body.appendChild(toast);
-  // Fade in
-  setTimeout(() => {
-    toast.style.opacity = '1';
-  }, 10);
-  // Fade out and remove
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    setTimeout(() => toast.remove(), 300);
-  }, 1800);
-}
+    navigator.clipboard.writeText(code).then(() => {
+      // 可加 toast 提示等
+      window.open(url, '_blank'); // 成功后跳转
+    }).catch(err => {
+      console.error("Copy failed", err);
+      window.open(url, '_blank'); // 即使失败也跳转
+    });
+  }
 </script>
 
 
